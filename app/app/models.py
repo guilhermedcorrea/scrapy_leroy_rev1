@@ -40,7 +40,7 @@ def insert_product(session, **product_data):
     session.add(new_product)
     session.commit()
 
-# Uso do decorador para inserir um novo produto
+
 insert_product(
     referencia_produto='123', pagina='example.com', categoria='Electronics',
     subcategoria='Phones', marca='Brand X', concorrente='Competitor',
