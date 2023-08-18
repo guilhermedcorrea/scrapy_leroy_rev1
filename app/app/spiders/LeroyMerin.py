@@ -47,7 +47,7 @@ class LeroymerinSpider(scrapy.Spider):
 
         driver.get("https://www.leroymerlin.com.br/")
         KEY = driver.find_element(By.CSS_SELECTOR, 'input[aria-autocomplete="list"]')
-        KEY.send_keys("Porcelanato")
+        KEY.send_keys("Portinari")
         VALLUE = driver.find_element(By.CSS_SELECTOR, 'button[aria-label="Buscar"]').click()
 
         time.sleep(5)
@@ -84,13 +84,10 @@ class LeroymerinSpider(scrapy.Spider):
 
             products.append(product)
 
-        self.log("Detalhes dos produtos:")
-        for product in products:
-            print(product)
-
+       
         driver.quit()
 
-
+        print(product)
         
     def click_last_page_button(self, driver):
         try:
